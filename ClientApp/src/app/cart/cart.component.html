@@ -1,0 +1,12 @@
+<div class = "dropdown">
+  <button class = "leftycart" (click) = "clickedCart()">Cart</button>
+
+  <div id="myDropdown" class="dropdown-content" >
+    <a href = '#' *ngFor="let product of cartItems ">
+      <b>{{product.productName}}</b> : ${{product.price}} <br> Quantity: x{{product.quantity}} <br> Total =  ${{product.price * product.quantity}}
+      <button (click) = "del(product.productId)">
+        <span class="glyphicon glyphicon-minus"></span>
+      </button>
+    </a>
+  </div>
+</div>

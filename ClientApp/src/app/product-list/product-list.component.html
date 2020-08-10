@@ -1,0 +1,22 @@
+<nav>
+  <button class="hide-button" (click)="hideIt($event)"> {{ buttonDisplayValue }} </button>
+  <button class="addProduct" (click)="addPost()">Add Product</button>
+</nav>
+
+<div *ngFor="let product of products"  class="row" id="prodlist">
+  <p class="productDetails" *ngIf="showId"> {{ product.productId }} </p>
+  <p class="productDetails" > {{ product.productName }} </p>
+  <p class="productDetails"> ${{ product.price }} </p>
+
+
+  <app-stars class='productDetails' [rating]= ' product.starRating '></app-stars>
+  <img class="imgProp" [src]='product.imageUrl' [title]='product.productName' />
+
+  <button class="deleteProduct" (click)="deleteProduct(product.productId)">Delete</button>
+  <button class="updateProduct" (click)="updateProduct(product.productId)">Update Product</button>
+  <button class="addCart" (click)="addCart(product.productId)"><span class="glyphicon glyphicon-plus"></span>Add To Cart</button>
+
+</div>
+<app-cart></app-cart>
+
+

@@ -1,0 +1,16 @@
+.imgProp {
+  width: 50px;
+  margin: 2px;
+}
+
+.row {
+  margin-left: 10px;
+  border-bottom: black;
+  border-bottom-style: solid;
+}
+
+.productDetails {
+  float: left;
+  width: 100px;
+  margin-left: 5px;
+}
